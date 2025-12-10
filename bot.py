@@ -3,6 +3,7 @@ import requests
 import threading
 import random
 import time
+import os                     # ← ĐÃ THÊM DÒNG NÀY
 from nacl.signing import VerifyKey
 from nacl.exceptions import BadSignatureError
 
@@ -12,7 +13,7 @@ CLIENT_ID = "991833962320248962"
 CLIENT_SECRET = "HuzXz4F8kFb7cHXpra--hlNSw_eDDr"
 REDIRECT_URI = "https://thu-an.onrender.com/callback"
 
-# PUBLIC KEY CỦA BẠN – ĐÃ DÁN SẴN
+# Public Key của bạn (đã dán sẵn)
 PUBLIC_KEY = "18606ab61963386176630dd5aabc0165d04a981aedc2fb5f70c57a818c693ea3"
 verify_key = VerifyKey(bytes.fromhex(PUBLIC_KEY))
 
